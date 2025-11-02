@@ -33,7 +33,7 @@ def gerar_token():
             return
 
         # Salva o token no arquivo TXT
-        with open("C:\\Users\\guilhermepinheiro-ie\\OneDrive - Instituto Germinare\\Área de Trabalho\\2º Ano\\Tech\\BI\\Inter\\bi-mobile\\token.txt", "w", encoding="utf-8") as f:
+        with open(getenv("PATH_TOKEN"), "w", encoding="utf-8") as f:
             f.write(token)
 
         print("Token gerado e salvo com sucesso!")
