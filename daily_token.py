@@ -20,7 +20,7 @@ def gerar_token():
         )
 
         if response.status_code != 200:
-            print(f"❌ Falha ao obter token: {response.status_code}")
+            print(f"Falha ao obter token: {response.status_code}")
             print(response.text)
             return
 
@@ -28,7 +28,7 @@ def gerar_token():
         token = data.get("access_token")
 
         if not token:
-            print("❌ Token não encontrado na resposta da API.")
+            print("Token não encontrado na resposta da API.")
             print(data)
             return
 
@@ -36,10 +36,10 @@ def gerar_token():
         with open("C:\\Users\\guilhermepinheiro-ie\\OneDrive - Instituto Germinare\\Área de Trabalho\\2º Ano\\Tech\\BI\\Inter\\bi-mobile\\token.txt", "w", encoding="utf-8") as f:
             f.write(token)
 
-        print("✅ Token gerado e salvo com sucesso!")
+        print("Token gerado e salvo com sucesso!")
 
     except Exception as e:
-        print(f"❌ Erro inesperado: {e}")
+        print(f"Erro inesperado: {e}")
 
 
 if __name__ == "__main__":
